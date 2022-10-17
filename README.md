@@ -1,24 +1,23 @@
-# AzerothCore Challenge Modes
-Challenge Modes Module for AzerothCore
+# 艾泽拉斯核心挑战模式
+艾泽拉斯核心挑战模式模块
 
-This module adds the following challenge modes:
+该模块增加了以下挑战模式：
 
-- **Hardcore** - Players who die are permanently ghosts and can never be revived.
-- **Semi-Hardcore** - Players who die lose all worn equipment and carried gold.
-- **Self Crafted** - Players can only wear equipment that they have crafted.
-- **Item Quality Level** - Players can only wear equipment that is of Normal or Poor quality
-- **Slow XP Gain** - Players receive 0.5x the normal amount of XP.
-- **Very Slow XP Gain** - Players receive 0.25x the normal amount of XP.
-- **Quest XP Only** - Players can receive XP only from quests
-- **Iron Man Mode** - Enforces the [Iron Man Ruleset](https://wowchallenges.com/challangeinfo/iron-man/)
+- **Hardcore（硬核）** - 死去的玩家永远是鬼魂，永远无法复活。
+- **Semi-Hardcore（半硬核）** - 死亡的玩家将失去所有磨损的装备和携带的金币。不能与硬核同时启用。
+- **SelfCrafted（专业模式）** - 玩家只能穿戴他们制作的装备。
+- **ItemQualityLevel（平民模式）** - 玩家只能穿着普通或低质量的装备
+- **SlowXpGain（缓慢模式）** - 玩家获得 0.5 倍正常数量的 XP。
+- **VerySlowXpGain（极慢模式）** - 玩家获得 0.25 倍正常数量的 XP。
+- **QuestXpOnly（任务模式）** - 玩家只能从任务中获得 XP
+- **IronManMode（钢铁侠模式-）** - 执行 [钢铁侠规则集](https://wowchallenges.com/challangeinfo/iron-man/)
 
-Challenges can be activated per-character by interacting with the Shrine of Challenge added near the graveyard of each starting area.
-Challenges can only be enabled on characters at level 1 (or level 55 for Death Knights).
+每个角色都可以通过与每个起始区域的墓地附近添加的**挑战模式**互动来激活挑战。挑战只能在 1 级（或死亡骑士 55 级）的角色上启用。
 
-Multiple challenges can be activated on a single character as long as they do not conflict, such as Hardcore and Semi-Hardcore.
+只要不冲突，可以在单个角色上激活多个挑战，例如硬核和半硬核。
 
-Rewards for reaching level thresholds for each challenge can be added using the Config file, and can include:
-- Items
-- Titles
-- Talent Points
-- Increased XP Rate
+可以使用配置文件添加达到每个挑战的级别阈值的奖励，并且可以包括：
+- 物品
+- 头衔
+- 天赋点
+- 经验倍数
