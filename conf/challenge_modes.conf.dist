@@ -8,44 +8,44 @@
 # Challenge Mods Config
 ########################################
 #    ChallengeModes.Enable
-#        Description: Enable challenge modes.
-#            If set to 0, all challenges will be disabled, and the challenge mode selection object will not be present in starting areas.
+#        Description: 开启挑战模式。
+#            如果设置为0，所有挑战将被禁用，挑战模式选择对象将不会出现在起始区域。
 #        Default:     0 - Disabled
 #                     1 - Enabled
 #
 
 ChallengeModes.Enable = 0
 #
-#    The following challenge modes are available:
-#        Hardcore - Players who die are permanently ghosts and can never be revived.
-#        SemiHardcore - Players who die lose all worn equipment and carried gold. Cannot be enabled at the same time as Hardcore.
-#        SelfCrafted - Players can only wear equipment that they have crafted.
-#        ItemQualityLevel - Players can only wear equipment that is of Normal or Poor quality
-#        SlowXpGain - Players receive 0.5x the normal amount of XP.
-#        VerySlowXpGain - Players receive 0.25x the normal amount of XP. Provides all rewards of SlowXpGain as well.
-#        QuestXpOnly - Players can receive XP only from quests
-#        IronManMode - Enforces the Iron Man ruleset (https://wowchallenges.com/challangeinfo/iron-man/)
+#    提供以下挑战模式：
+#        Hardcore（硬核） - 死去的玩家永远是鬼魂，永远无法复活。
+#        SemiHardcore（半硬核） - 死亡的玩家将失去所有磨损的装备和携带的金币。不能与硬核同时启用。
+#        SelfCrafted（专业模式） - 玩家只能穿戴他们制作的装备。
+#        ItemQualityLevel（平民模式） - 玩家只能穿着普通或低质量的装备
+#        SlowXpGain（缓慢模式） - 玩家获得 0.5 倍正常数量的 XP。
+#        VerySlowXpGain（极慢模式） - 玩家获得 0.25 倍正常数量的 XP。
+#        QuestXpOnly（任务模式） - 玩家只能从任务中获得 XP
+#        IronManMode（钢铁侠模式-） - Enforces the Iron Man ruleset (https://wowchallenges.com/challangeinfo/iron-man/)
 #
 #
-#    The options for each mode follow the same format. "<Challenge>" is replaced with the name of the challenge, such as Hardcore. The following options are possible:
+#    每种模式的选项都遵循相同的格式。 "<Challenge>" 替换为挑战的名称，例如 Hardcore. 有以下选项:
 #    <Challenge>.Enable = 1
-#        If set to 0, this challenge option will not be selectable at the challenge modes object.
+#        如果设置为 0，此挑战选项将无法在挑战模式对象中选择。
 #    <Challenge>.TitleRewards = ""
-#        Rewards titles for players when reaching the given levels with the challenge enabled.
-#        The IDs used are from CharTitles.dbc. The format is the level followed by the title ID, separated by commas.
-#        Example: <Challenge>.TitleRewards = "60 143, 70 123, 80 145"
+#        在启用挑战的情况下达到给定级别时奖励玩家头衔。
+#        使用的 ID 来自 CharTitles.dbc. 格式是级别后跟标题 ID，用逗号分隔。
+#        示例：<Challenge>.TitleRewards = "60 143, 70 123, 80 145"
 #    <Challenge>.XPMultiplier = ""
-#        Multiplies XP the player gains if this challege is enabled. This is a multiplier values, so bonus are applied multiplicatively.
-#        This reward option is not available for SlowXpGain and VerySlowXpGain
-#        Example: <Challenge>.XPMultiplier = "1.5"
+#        如果开启此挑战，将增加玩家获得的经验值。这是一个乘数值，所以加成是乘数应用。
+#        此奖励选项不适用于 SlowXpGain 和 VerySlowXpGain
+#        示例：<Challenge>.XPMultiplier = "1.5"
 #    <Challenge>.TalentRewards = ""
-#        Rewards talent points for players when reaching the given levels with the challenge enabled.
-#        The format is the level followed by the number of talent points given at that level, separated by commas.
-#        Example: <Challenge>.TalentRewards = "30 1, 35 1, 40 1, 45 1, 50 1, 60 2, 70 2, 80 5"
+#        在启用挑战的情况下达到给定级别时奖励玩家天赋点。
+#        格式是等级和该等级的天赋点数，以逗号分隔。
+#        示例：<Challenge>.TalentRewards = "30 1, 35 1, 40 1, 45 1, 50 1, 60 2, 70 2, 80 5"
 #    <Challenge>.ItemRewards = ""
-#        Rewards items for players when reaching the given levels with the challenge enabled.
-#        The IDs used are item entry IDs. The format is the level followed by the item ID, separated by commas.
-#        Example: <Challenge>.ItemRewards = "80 54811"
+#        在启用挑战的情况下达到给定级别时为玩家奖励物品。
+#        使用的 ID 是 item entry IDs. 格式为级别后跟 item ID, 以逗号分隔。
+#        示例：<Challenge>.ItemRewards = "80 54811"
 #
 #
 
