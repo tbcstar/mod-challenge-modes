@@ -582,7 +582,7 @@ public:
 
 };
 
-class gobject_challenge_modes : public GameObjectScript
+class npc_challenge_modes : public CreatureScript
 {
 private:
     static bool playerSettingEnabled(Player* player, uint8 settingIndex)
@@ -591,11 +591,11 @@ private:
     }
 
 public:
-    gobject_challenge_modes() : GameObjectScript("gobject_challenge_modes") { }
+    npc_challenge_modes() : CreatureScript("npc_challenge_modes") { }
 
-    struct gobject_challenge_modesAI: GameObjectAI
+    struct npc_challenge_modesAI: ScriptedAI
     {
-        explicit gobject_challenge_modesAI(GameObject* object) : GameObjectAI(object) { };
+        explicit npc_challenge_modesAI(Creature* creature) : ScriptedAI(creature) { };
 
         bool CanBeSeen(Player const* player) override
         {
@@ -607,7 +607,7 @@ public:
         }
     };
 
-    bool OnGossipHello(Player* player, GameObject* go) override
+    bool OnGossipHello(Player* player, Creature* go) override
     {
         if (sChallengeModes->challengeEnabled(SETTING_HARDCORE) && !playerSettingEnabled(player, SETTING_HARDCORE) && !playerSettingEnabled(player, SETTING_SEMI_HARDCORE))
         {
@@ -645,7 +645,7 @@ public:
         return true;
     }
 
-    bool OnGossipSelect(Player* player, GameObject* /*go*/, uint32 /*sender*/, uint32 action) override
+    bool OnGossipSelect(Player* player, Creature* /*go*/, uint32 /*sender*/, uint32 action) override
     {
         player->UpdatePlayerSetting("mod-challenge-modes", action, 1);
         ChatHandler(player->GetSession()).PSendSysMessage("挑战开启。");
@@ -653,9 +653,9 @@ public:
         return true;
     }
 
-    GameObjectAI* GetAI(GameObject* object) const override
+    ScriptedAI* GetAI(Creature* creature) const override
     {
-        return new gobject_challenge_modesAI(object);
+        return new npc_challenge_modesAI(creature);
     }
 };
 
@@ -663,7 +663,7 @@ public:
 void AddSC_mod_challenge_modes()
 {
     new ChallengeModes_WorldScript();
-    new gobject_challenge_modes();
+    new npc_challenge_modes();
     new ChallengeMode_Hardcore();
     new ChallengeMode_SemiHardcore();
     new ChallengeMode_SelfCrafted();

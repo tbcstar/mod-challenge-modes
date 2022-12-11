@@ -9,7 +9,6 @@
 #include "ScriptedGossip.h"
 #include "Item.h"
 #include "ItemTemplate.h"
-#include "GameObjectAI.h"
 #include <map>
 
 
